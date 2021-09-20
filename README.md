@@ -148,3 +148,26 @@
 
 
                const getTotalFriendCount = users => { return users.reduce((total, user) => {return total + user.friends.length}, 0);};
+
+
+
+ 8. Задача. Сортировка по балансу
+Этот массив объектов мы будем передавать в параметр users при вызове функции из задания.
+
+[
+  {
+    name: 'Moore Hensley',
+    email: 'moorehensley@indexia.com',
+    eyeColor: 'blue',
+    friends: ['Sharron Pace'],
+    isActive: false,
+    balance: 2811,
+    gender: 'male'
+  },
+  {Задание
+Дополни функцию sortByAscendingBalance(users) так, чтобы она возвращала массив пользователей отсортированный по возрастанию их баланса (свойство balance).
+
+
+                const sortByAscendingBalance = users => {
+                  const newBalance = (a, b) => a.balance - b.balance;
+                  return users.sort(newBalance);
