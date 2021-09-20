@@ -62,3 +62,39 @@
 
             const getUsersWithAge = (users, minAge, maxAge) => 
             users.filter(user => user.age >= minAge && user.age < maxAge);
+
+
+4. Задача. Пользователи с другом
+Этот массив объектов мы будем передавать в параметр users при вызове функции из задания.
+[
+  {
+    name: 'Moore Hensley',
+    email: 'moorehensley@indexia.com',
+    eyeColor: 'blue',
+    friends: ['Sharron Pace'],
+    isActive: false,
+    balance: 2811,
+    gender: 'male',
+    age: 37
+  },
+  Задание
+Дополни функцию getUsersWithFriend(users, friendName) так, чтобы она возвращала массив пользователей у которых есть друг с именем в параметре friendName. Массив друзей пользователя хранится в свойстве friends.
+
+5. адача. Пользователи с другом
+Этот массив объектов мы будем передавать в параметр users при вызове функции из задания.
+
+[
+  {
+    name: 'Moore Hensley',
+    email: 'moorehensley@indexia.com',
+    eyeColor: 'blue',
+    friends: ['Sharron Pace'],
+    isActive: false,
+    balance: 2811,
+    gender: 'male',
+    age: 37
+  },
+  Задание
+Дополни функцию getUsersWithFriend(users, friendName) так, чтобы она возвращала массив пользователей у которых есть друг с именем в параметре friendName. Массив друзей пользователя хранится в свойстве friends.
+
+                const getUsersWithFriend = (users, friendName) => users.filter(user => user.friends.includes(friendName));
