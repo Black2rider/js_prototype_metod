@@ -180,3 +180,29 @@
 
 
                 const sortByDescendingFriendCount = users => [...users].sort((a, b) => b.friends.length - a.friends.length);
+
+
+
+10. Задача. Имена друзей
+Этот массив объектов мы будем передавать в параметр users при вызове функции из задания.
+
+[
+  {
+    name: 'Moore Hensley',
+    email: 'moorehensley@indexia.com',
+    eyeColor: 'blue',
+    friends: ['Sharron Pace'],
+    isActive: false,
+    balance: 2811,
+    gender: 'male'
+  },
+  {
+  Задание
+Дополни функцию getSortedFriends(users) так, чтобы она возвращала массив уникальных имён друзей (свойство friends) отсортированный по алфавиту .
+
+
+                const getSortedFriends = users =>
+                  users
+                  .flatMap(user => user.friends)
+                  .filter((friend, index, allFriends) => allFriends.indexOf(friend) === index)
+                  .sort((a, b) => a.localeCompare(b));
