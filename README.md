@@ -206,3 +206,16 @@
                   .flatMap(user => user.friends)
                   .filter((friend, index, allFriends) => allFriends.indexOf(friend) === index)
                   .sort((a, b) => a.localeCompare(b));
+
+
+
+11. Задача. Общий баланс
+Этот массив объектов мы будем передавать в параметр users при вызове функции из задания.
+Задание
+Дополни функцию getTotalBalanceByGender(users, gender) так, чтобы она возвращала общий баланс пользователей (свойство balance), пол которых (свойство gender) совпадает со значением параметра gender.
+
+                const getTotalBalanceByGender = (users, gender) =>
+                   [...users]
+                   .filter(user => user.gender === gender)
+                   .map(user => user.balance)
+                   .reduce((total, value) => total + value, 0);
