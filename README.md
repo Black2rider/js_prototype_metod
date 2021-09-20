@@ -104,3 +104,25 @@
                 
                  const getFriends = (users) =>
                   users.flatMap(user => user.friends).filter((friend, index, allFriends) => allFriends.indexOf(friend) === index);
+
+
+6. Задача. Активные пользователи
+Этот массив объектов мы будем передавать в параметр users при вызове функции из задания.
+
+[
+  {
+    name: 'Moore Hensley',
+    email: 'moorehensley@indexia.com',
+    eyeColor: 'blue',
+    friends: ['Sharron Pace'],
+    isActive: false,
+    balance: 2811,
+    gender: 'male',
+    age: 37
+  },
+  {
+  Задание
+Дополни функцию getActiveUsers(users) так, чтобы она возвращала массив активных пользователей, значение свойства isActive которых true.
+
+
+                const getActiveUsers = (users) => users.filter(user => user.isActive === true); 
