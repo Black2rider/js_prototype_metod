@@ -80,7 +80,11 @@
   Задание
 Дополни функцию getUsersWithFriend(users, friendName) так, чтобы она возвращала массив пользователей у которых есть друг с именем в параметре friendName. Массив друзей пользователя хранится в свойстве friends.
 
-5. адача. Пользователи с другом
+                 const getUsersWithFriend = (users, friendName) => users.filter(user => user.friends.includes(friendName));
+
+
+
+5. Задача. Пользователи с другом
 Этот массив объектов мы будем передавать в параметр users при вызове функции из задания.
 
 [
@@ -95,6 +99,12 @@
     age: 37
   },
   Задание
-Дополни функцию getUsersWithFriend(users, friendName) так, чтобы она возвращала массив пользователей у которых есть друг с именем в параметре friendName. Массив друзей пользователя хранится в свойстве friends.
+Дополни функцию getFriends(users) так, чтобы она возвращала массив друзей всех пользователей (свойство friends). У нескольких пользователей могут быть одинаковые друзья, сделай так чтобы возвращаемый массив не содержал повторений.
+
+                const getFriends = (users) => {
+                  const getFriend = users.flatMap(user => user.friends);
+                  getFriend.filter((friend, index, users) => users.indexOf(friend) === index); 
+
+                };
 
                 const getUsersWithFriend = (users, friendName) => users.filter(user => user.friends.includes(friendName));
