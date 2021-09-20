@@ -171,3 +171,12 @@
                 const sortByAscendingBalance = users => {
                   const newBalance = (a, b) => a.balance - b.balance;
                   return users.sort(newBalance);
+
+
+9. Задача. Сортировка по количеству друзей
+Этот массив объектов мы будем передавать в параметр users при вызове функции из задания.
+Задание
+Дополни функцию sortByDescendingFriendCount(users) так, чтобы она возвращала массив пользователей отсортированный по убыванию количества их друзей (свойство friends).
+
+
+                const sortByDescendingFriendCount = users => [...users].sort((a, b) => b.friends.length - a.friends.length);
