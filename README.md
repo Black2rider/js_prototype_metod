@@ -126,3 +126,25 @@
 
 
                 const getActiveUsers = (users) => users.filter(user => user.isActive === true); 
+                
+                
+                
+   7. Задача. Общее количество друзей
+Этот массив объектов мы будем передавать в параметр users при вызове функции из задания.
+
+[
+  {
+    name: 'Moore Hensley',
+    email: 'moorehensley@indexia.com',
+    eyeColor: 'blue',
+    friends: ['Sharron Pace'],
+    isActive: false,
+    balance: 2811,
+    gender: 'male'
+  },
+  { 
+  Задание
+Дополни функцию getTotalFriendCount(users) так, чтобы она считала и возвращала общее количество друзей (свойство friends) всех пользователей из массива users.
+
+
+               const getTotalFriendCount = users => { return users.reduce((total, user) => {return total + user.friends.length}, 0);};
